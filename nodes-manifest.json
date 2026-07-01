@@ -1,0 +1,51 @@
+{
+  "description": "Every class_type in edit NSFW API workflows. Docker build fails if any custom node is missing.",
+  "workflow_files": ["api-workflow-single.json", "api-workflow-multi.json"],
+  "nodes": [
+    {
+      "id": "comfy-core",
+      "install": "base image",
+      "nodes": [
+        "CLIPLoader",
+        "CLIPTextEncode",
+        "CFGGuider",
+        "CheckpointLoaderSimple",
+        "ConditioningZeroOut",
+        "EmptyFlux2LatentImage",
+        "Flux2Scheduler",
+        "ImageScale",
+        "KSampler",
+        "KSamplerSelect",
+        "LoadImage",
+        "RandomNoise",
+        "ReferenceLatent",
+        "SamplerCustomAdvanced",
+        "SaveImage",
+        "UNETLoader",
+        "VAEDecode",
+        "VAEEncode",
+        "VAELoader"
+      ]
+    },
+    {
+      "id": "rgthree-comfy",
+      "install": "comfy node install rgthree-comfy",
+      "nodes": ["Power Lora Loader (rgthree)"]
+    },
+    {
+      "id": "ComfyUI-Easy-Use",
+      "install": "git clone ComfyUI-Easy-Use",
+      "nodes": ["easy cleanGpuUsed", "easy clearCacheAll"]
+    },
+    {
+      "id": "comfyui-impact-pack",
+      "install": "comfy node install comfyui-impact-pack",
+      "nodes": ["SAMLoader", "FaceDetailer"]
+    },
+    {
+      "id": "comfyui-impact-subpack",
+      "install": "comfy node install comfyui-impact-subpack",
+      "nodes": ["UltralyticsDetectorProvider"]
+    }
+  ]
+}

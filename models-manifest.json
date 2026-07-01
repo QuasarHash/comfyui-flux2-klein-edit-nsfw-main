@@ -1,0 +1,62 @@
+{
+  "description": "Klein image-edit + mopMix + anatomy FaceDetailer stack (NSFW edit). Mount on RunPod Network Volume at /runpod-volume/models/.",
+  "volume_root": "/runpod-volume/models",
+  "models": [
+    {
+      "file": "gonzalomoKlein_v10.safetensors",
+      "volume_path": "diffusion_models/gonzalomoKlein_v10.safetensors",
+      "required": true
+    },
+    {
+      "file": "qwen_3_8b_fp8mixed.safetensors",
+      "volume_path": "text_encoders/qwen_3_8b_fp8mixed.safetensors",
+      "required": true
+    },
+    {
+      "file": "flux2-vae.safetensors",
+      "volume_path": "vae/flux2-vae.safetensors",
+      "required": true
+    },
+    {
+      "file": "mopMix_omnia.safetensors",
+      "volume_path": "checkpoints/mopMix_omnia.safetensors",
+      "required": true
+    },
+    {
+      "file": "Yarely_Rae_Lora_Klein_v1_epoch_8.safetensors",
+      "volume_path": "loras/Yarely_Rae_Lora_Klein_v1_epoch_8.safetensors",
+      "required": true
+    },
+    {
+      "file": "InstaPic.safetensors",
+      "volume_path": "loras/InstaPic.safetensors",
+      "required": true
+    },
+    {
+      "file": "lenovo_flux_klein9b.safetensors",
+      "volume_path": "loras/lenovo_flux_klein9b.safetensors",
+      "required": true
+    },
+    {
+      "file": "klein_snofs_v1_4.safetensors",
+      "volume_path": "loras/klein_snofs_v1_4.safetensors",
+      "required": true,
+      "note": "lora_4 on Klein edit stack"
+    },
+    {
+      "file": "sam_vit_b_01ec64.pth",
+      "volume_path": "sams/sam_vit_b_01ec64.pth",
+      "required": true
+    },
+    {
+      "file": "Nipples.pt",
+      "volume_path": "ultralytics/bbox/Nipples.pt",
+      "required": true
+    },
+    {
+      "file": "Pussy.pt",
+      "volume_path": "ultralytics/bbox/Pussy.pt",
+      "required": true
+    }
+  ]
+}
