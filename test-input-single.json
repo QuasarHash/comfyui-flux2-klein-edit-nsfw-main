@@ -208,20 +208,15 @@
           ],
           "lora_1": {
             "on": true,
-            "lora": "Yarely_Rae_Lora_Klein_v1_epoch_8.safetensors",
-            "strength": 1.25
-          },
-          "lora_2": {
-            "on": true,
             "lora": "InstaPic.safetensors",
             "strength": 0.4
           },
-          "lora_3": {
+          "lora_2": {
             "on": true,
             "lora": "lenovo_flux_klein9b.safetensors",
             "strength": 0.4
           },
-          "lora_4": {
+          "lora_3": {
             "on": true,
             "lora": "klein_snofs_v1_4.safetensors",
             "strength": 0.4
